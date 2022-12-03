@@ -12,6 +12,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using Play.Common.Settings;
 using Play.Identity.Service.Entities;
+using Play.Identity.Service.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,22 @@ namespace Play.Identity.Service
             BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
             var serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
             var mongoDbSettings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+            var identityServerSettings = Configuration.GetSection(nameof(IdentityServerSettings)).Get<IdentityServerSettings>();
+
+            services
+                .AddIdentityServer(options =>
+                {
+                    //these configurations are added to give more verbosity to log events of Identity Server
+                    options.Events.RaiseSuccessEvents = true;
+                    options.Events.RaiseFailureEvents = true;
+                    options.Events.RaiseErrorEvents = true;
+                })
+                .AddAspNetIdentity<ApplicationUser>()
+                .AddInMemoryApiScopes(identityServerSettings.ApiScopes)
+                .AddInMemoryApiResources(identityServerSettings.ApiResources)
+                .AddInMemoryClients(identityServerSettings.Clients)
+                .AddInMemoryIdentityResources(identityServerSettings.IdentityResources)
+                .AddDeveloperSigningCredential();
 
             //configure Asp.NET identity and connect it to our mongoDB database
             services
@@ -43,6 +60,10 @@ namespace Play.Identity.Service
                     mongoDbSettings.ConnectionString,
                     serviceSettings.ServiceName
                 );
+
+            //this is special because we are performing authentication inside the server itself
+            services
+                .AddLocalApiAuthentication();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -66,6 +87,8 @@ namespace Play.Identity.Service
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseIdentityServer();
 
             app.UseAuthorization();
 
