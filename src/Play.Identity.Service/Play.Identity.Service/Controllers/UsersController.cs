@@ -14,7 +14,7 @@ namespace Play.Identity.Service.Controllers
 {
     [ApiController]
     [Route("Users")]
-    [Authorize(Policy = LocalApi.PolicyName)]
+    [Authorize(Policy = LocalApi.PolicyName, Roles = Roles.Roles.Admin)]
     public class UsersController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> userManager;

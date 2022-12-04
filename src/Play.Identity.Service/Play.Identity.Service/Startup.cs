@@ -12,6 +12,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using Play.Common.Settings;
 using Play.Identity.Service.Entities;
+using Play.Identity.Service.HostedServices;
 using Play.Identity.Service.Settings;
 using System;
 using System.Collections.Generic;
@@ -54,16 +55,26 @@ namespace Play.Identity.Service
 
             //configure Asp.NET identity and connect it to our mongoDB database
             services
+                .Configure<IdentitySettings>(Configuration.GetSection(nameof(IdentitySettings)))
                 .AddDefaultIdentity<ApplicationUser>()
                 .AddRoles<ApplicationRole>()
+                /*
+                    each one of this db stores registred here, will generate a respective collection
+                    here we would have the ApplicationUser collection as well has the ApplicationRole collection
+                 */
                 .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>(
                     mongoDbSettings.ConnectionString,
+                    //this down below will generate the name of the database
                     serviceSettings.ServiceName
                 );
 
             //this is special because we are performing authentication inside the server itself
             services
                 .AddLocalApiAuthentication();
+
+            //adds the hosted service that creates the roles and users
+            services
+                .AddHostedService<IdentitySeedHostedService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
