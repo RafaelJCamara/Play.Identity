@@ -73,5 +73,4 @@ namespace Play.Identity.Service.HostedServices
             }
         }
     }
-    }
 }
