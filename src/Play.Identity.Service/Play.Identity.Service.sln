@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Play.Identity.Service", "Play.Identity.Service\Play.Identity.Service.csproj", "{35394B6D-CEF0-40A9-A71D-1B3B6298A59A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Play.Identity.Service", "Play.Identity.Service\Play.Identity.Service.csproj", "{35394B6D-CEF0-40A9-A71D-1B3B6298A59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Play.Identity.Contracts", "..\Play.Identity.Contracts\Play.Identity.Contracts.csproj", "{04C378C7-6D25-4BBA-85E1-47D0B2AA5F00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{35394B6D-CEF0-40A9-A71D-1B3B6298A59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35394B6D-CEF0-40A9-A71D-1B3B6298A59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35394B6D-CEF0-40A9-A71D-1B3B6298A59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C378C7-6D25-4BBA-85E1-47D0B2AA5F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C378C7-6D25-4BBA-85E1-47D0B2AA5F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C378C7-6D25-4BBA-85E1-47D0B2AA5F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C378C7-6D25-4BBA-85E1-47D0B2AA5F00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

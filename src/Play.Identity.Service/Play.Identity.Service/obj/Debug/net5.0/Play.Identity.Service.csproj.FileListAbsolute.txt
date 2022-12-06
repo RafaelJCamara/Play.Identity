@@ -31,6 +31,7 @@ C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Id
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\MassTransit.AspNetCoreIntegration.dll
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\MassTransit.RabbitMqTransport.dll
+C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -168,14 +169,18 @@ C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Id
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\Play.Identity.Contracts.dll
+C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\bin\Debug\net5.0\Play.Identity.Contracts.pdb
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\scopedcss\bundle\Play.Identity.Service.styles.css
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\staticwebassets\Play.Identity.Service.StaticWebAssets.Manifest.cache
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\staticwebassets\Play.Identity.Service.StaticWebAssets.xml
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Play.Identity.Service.TagHelpers.input.cache
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Play.Identity.Service.TagHelpers.output.cache
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Play.Identity.Service.RazorCoreGenerate.cache
+C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Service\Play.Identity.Service\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
