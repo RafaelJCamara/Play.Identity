@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Play.Identity.Contracts;
 using Play.Identity.Service.Entities;
 using Play.Identity.Service.Extensions;
 using System;
@@ -18,10 +20,12 @@ namespace Play.Identity.Service.Controllers
     public class UsersController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly IPublishEndpoint publishEndpoint;
 
-        public UsersController(UserManager<ApplicationUser> userManager)
+        public UsersController(UserManager<ApplicationUser> userManager, IPublishEndpoint publishEndpoint)
         {
             this.userManager = userManager;
+            this.publishEndpoint = publishEndpoint;
         }
 
         [HttpGet]
@@ -57,8 +61,9 @@ namespace Play.Identity.Service.Controllers
 
             await userManager.UpdateAsync(user);
 
-            return NoContent();
+            await publishEndpoint.Publish(new UserUpdated(user.Id, user.Email, user.Gil));
 
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
@@ -69,6 +74,13 @@ namespace Play.Identity.Service.Controllers
             if (user == null) return NotFound();
 
             await userManager.DeleteAsync(user);
+
+            /*
+                We could have two options here>
+                  (1) Create a delete user contract
+                  (2) Don't delete the user and make him have 0 gil, thus not being able to make any purchases in the platform
+             */
+            await publishEndpoint.Publish(new UserUpdated(user.Id, user.Email, 0));
 
             return NoContent();
         }
