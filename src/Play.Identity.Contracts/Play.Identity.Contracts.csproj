@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+	<PackageDescription>Identity contracts used by Play Economy services.</PackageDescription>
+	<Authors>Rafael Camara</Authors>
+	<Company>Nebula</Company>
   </PropertyGroup>
 
 </Project>

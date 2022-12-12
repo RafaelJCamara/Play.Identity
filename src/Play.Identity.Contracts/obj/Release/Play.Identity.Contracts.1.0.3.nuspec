@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Play.Identity.Contracts</id>
+    <version>1.0.3</version>
+    <authors>Rafael Camara</authors>
+    <description>Identity contracts used by Play Economy services.</description>
+    <repository url="https://github.com/RafaelJCamara/Play.Identity" />
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Rafael\Documents\Projects\DotnetMicroservices\Play.Identity\src\Play.Identity.Contracts\bin\Release\net5.0\Play.Identity.Contracts.dll" target="lib\net5.0\Play.Identity.Contracts.dll" />
+  </files>
+</package>

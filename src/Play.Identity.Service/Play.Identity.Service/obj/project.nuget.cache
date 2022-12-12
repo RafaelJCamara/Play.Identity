@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9HnSYIqW4fhnxuB+QUs6de0Wx5uKl5HT4+hkVsgR1mlwYFCRJrjFl53LvqpfJM0doZQev498V4ULNGNdKdGKFQ==",
+  "dgSpecHash": "pgFeLMJTrzS/DkvOT2Ijma5KMZJC+taCOjlPYRrWqeLYklSmHTm6/tlmvBJ22WXgugU45i/YGlrZgg7XXYiU0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service\\Play.Identity.Service.csproj",
   "expectedPackageFiles": [
@@ -174,7 +174,8 @@
     "C:\\Users\\Rafael\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Rafael\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Rafael\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Rafael\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
+    "C:\\Users\\Rafael\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512",
+    "C:\\Users\\Rafael\\.nuget\\packages\\play.identity.contracts\\1.0.0\\play.identity.contracts.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }
