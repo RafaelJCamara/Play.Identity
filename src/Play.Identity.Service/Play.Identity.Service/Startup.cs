@@ -1,6 +1,7 @@
 using GreenPipes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -123,6 +124,20 @@ namespace Play.Identity.Service
             app.UseIdentityServer();
 
             app.UseAuthorization();
+
+            /*
+                Our identity server, by default, doesn't deal very well with very well with communication done over HTTP (which will be the communication type done inside our microservices in the cloud)
+                In the cloud this would not be a problem, since our clients communicate with the microservices via API Gateway
+                The cookie is the Identity.External, which by default has the SameSite=None and must be used with HTTPS
+                SameSite=None means that any browser application can communicate with the service
+             */
+            app.UseCookiePolicy(new CookiePolicyOptions
+            {
+                /*
+                    With LAX, you allow people to communicate explicitly with us sends/starts the request with us, and supports HTTP
+                 */
+                MinimumSameSitePolicy = SameSiteMode.Lax
+            });
 
             app.UseEndpoints(endpoints =>
             {
