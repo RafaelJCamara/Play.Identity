@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
+      "projectUniqueName": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
       "projectName": "Play.Identity.Contracts",
-      "projectPath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
+      "projectPath": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
       "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\obj\\",
+      "outputPath": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,7 +52,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -61,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

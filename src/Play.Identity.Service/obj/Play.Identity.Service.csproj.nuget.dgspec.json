@@ -1,0 +1,167 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
+        "projectName": "Play.Identity.Contracts",
+        "projectPath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/RafaelJCamara/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service.csproj",
+        "projectName": "Play.Identity.Service",
+        "projectPath": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service.csproj",
+        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/RafaelJCamara/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj": {
+                "projectPath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AspNetCore.Identity.MongoDbCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "IdentityServer4": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
+            "IdentityServer4.AspNetIdentity": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Play.Common": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
