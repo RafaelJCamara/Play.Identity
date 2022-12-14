@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ApewFVZIDbAxH8hPjzih+9Ufy/eqS8kWY7AI+Yn8ydWaXiQN+ozxIg6dDFi8wVmqAfzRA78Xmv8g1Y9OZKurmg==",
+  "dgSpecHash": "DwMOLkOtq00e2Ff8NQKeupI5rJ0CkP0qQrEq99WqEEvu2Wlxq5ds+NUO7U7tujjMffnWV/jL5DL9mESKbA8p7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
+  "projectFilePath": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

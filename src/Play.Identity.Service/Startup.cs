@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using GreenPipes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,15 +22,13 @@ using Play.Identity.Service.Entities;
 using Play.Identity.Service.Exceptions;
 using Play.Identity.Service.HostedServices;
 using Play.Identity.Service.Settings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Play.Identity.Service
 {
     public class Startup
     {
+        private const string AllowedOriginSetting = "AllowedOrigin";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -42,22 +44,28 @@ namespace Play.Identity.Service
             var mongoDbSettings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
             var identityServerSettings = Configuration.GetSection(nameof(IdentityServerSettings)).Get<IdentityServerSettings>();
 
-            services
-                .AddMassTransitWithRabbitMq(retryConfigurator =>
-                {
-                    retryConfigurator.Interval(3, TimeSpan.FromSeconds(5));
-                    retryConfigurator.Ignore(typeof(UnknownUserException));
-                    retryConfigurator.Ignore(typeof(InsufficientFundsException));
-                });
+            services.Configure<IdentitySettings>(Configuration.GetSection(nameof(IdentitySettings)))
+                .AddDefaultIdentity<ApplicationUser>()
+                .AddRoles<ApplicationRole>()
+                .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>
+                (
+                    mongoDbSettings.ConnectionString,
+                    serviceSettings.ServiceName
+                );
 
-            services
-                .AddIdentityServer(options =>
-                {
-                    //these configurations are added to give more verbosity to log events of Identity Server
-                    options.Events.RaiseSuccessEvents = true;
-                    options.Events.RaiseFailureEvents = true;
-                    options.Events.RaiseErrorEvents = true;
-                })
+            services.AddMassTransitWithRabbitMq(retryConfigurator =>
+            {
+                retryConfigurator.Interval(3, TimeSpan.FromSeconds(5));
+                retryConfigurator.Ignore(typeof(UnknownUserException));
+                retryConfigurator.Ignore(typeof(InsufficientFundsException));
+            });
+
+            services.AddIdentityServer(options =>
+            {
+                options.Events.RaiseSuccessEvents = true;
+                options.Events.RaiseFailureEvents = true;
+                options.Events.RaiseErrorEvents = true;
+            })
                 .AddAspNetIdentity<ApplicationUser>()
                 .AddInMemoryApiScopes(identityServerSettings.ApiScopes)
                 .AddInMemoryApiResources(identityServerSettings.ApiResources)
@@ -65,30 +73,10 @@ namespace Play.Identity.Service
                 .AddInMemoryIdentityResources(identityServerSettings.IdentityResources)
                 .AddDeveloperSigningCredential();
 
-            //configure Asp.NET identity and connect it to our mongoDB database
-            services
-                .Configure<IdentitySettings>(Configuration.GetSection(nameof(IdentitySettings)))
-                .AddDefaultIdentity<ApplicationUser>()
-                .AddRoles<ApplicationRole>()
-                /*
-                    each one of this db stores registred here, will generate a respective collection
-                    here we would have the ApplicationUser collection as well has the ApplicationRole collection
-                 */
-                .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>(
-                    mongoDbSettings.ConnectionString,
-                    //this down below will generate the name of the database
-                    serviceSettings.ServiceName
-                );
-
-            //this is special because we are performing authentication inside the server itself
-            services
-                .AddLocalApiAuthentication();
-
-            //adds the hosted service that creates the roles and users
-            services
-                .AddHostedService<IdentitySeedHostedService>();
+            services.AddLocalApiAuthentication();
 
             services.AddControllers();
+            services.AddHostedService<IdentitySeedHostedService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Play.Identity.Service", Version = "v1" });
@@ -103,13 +91,10 @@ namespace Play.Identity.Service
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Play.Identity.Service v1"));
+
                 app.UseCors(builder =>
                 {
-                    /*
-                        By doing this, we are allowing any header from the server and any method (GET, POST, PUT, etc..)
-                     */
-                    builder
-                        .WithOrigins(Configuration["AllowedOrigin"])
+                    builder.WithOrigins(Configuration[AllowedOriginSetting])
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
@@ -122,20 +107,10 @@ namespace Play.Identity.Service
             app.UseRouting();
 
             app.UseIdentityServer();
-
             app.UseAuthorization();
 
-            /*
-                Our identity server, by default, doesn't deal very well with very well with communication done over HTTP (which will be the communication type done inside our microservices in the cloud)
-                In the cloud this would not be a problem, since our clients communicate with the microservices via API Gateway
-                The cookie is the Identity.External, which by default has the SameSite=None and must be used with HTTPS
-                SameSite=None means that any browser application can communicate with the service
-             */
             app.UseCookiePolicy(new CookiePolicyOptions
             {
-                /*
-                    With LAX, you allow people to communicate explicitly with us sends/starts the request with us, and supports HTTP
-                 */
                 MinimumSameSitePolicy = SameSiteMode.Lax
             });
 

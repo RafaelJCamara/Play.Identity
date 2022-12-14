@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service.csproj": {}
+    "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/Play.Identity.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj": {
+    "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
+        "projectUniqueName": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj",
         "projectName": "Play.Identity.Contracts",
-        "projectPath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj",
-        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\obj\\",
+        "projectPath": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj",
+        "packagesPath": "/Users/rafaelcamara/.nuget/packages/",
+        "outputPath": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/rafaelcamara/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/RafaelJCamara/index.json": {}
         },
@@ -46,8 +44,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -56,28 +53,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service.csproj": {
+    "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/Play.Identity.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service.csproj",
+        "projectUniqueName": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/Play.Identity.Service.csproj",
         "projectName": "Play.Identity.Service",
-        "projectPath": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\Play.Identity.Service.csproj",
-        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Service\\obj\\",
+        "projectPath": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/Play.Identity.Service.csproj",
+        "packagesPath": "/Users/rafaelcamara/.nuget/packages/",
+        "outputPath": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/rafaelcamara/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/RafaelJCamara/index.json": {}
         },
@@ -85,8 +80,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj": {
-                "projectPath": "C:\\Users\\Rafael\\Documents\\Projects\\DotnetMicroservices\\Play.Identity\\src\\Play.Identity.Contracts\\Play.Identity.Contracts.csproj"
+              "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj": {
+                "projectPath": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj"
               }
             }
           }
@@ -146,8 +141,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -159,7 +153,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
         }
       }
     }
