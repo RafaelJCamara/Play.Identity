@@ -1,5 +1,5 @@
-# Play.Identity.Contracts
-Identity contracts used by Play Economy services.
+# Play.Identity
+Identity service used by Play Economy services.
 
 ## Create and publish package
 ```powershell
