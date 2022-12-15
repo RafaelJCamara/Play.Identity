@@ -1,7 +1,7 @@
 # Play.Identity
 Identity service used by Play Economy services.
 
-## Create and publish package
+## Create and publish Identity.Contracts package
 ```powershell
 $version="1.0.3"
 $owner="RafaelJCamara"
