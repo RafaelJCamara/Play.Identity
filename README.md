@@ -3,7 +3,7 @@ Identity service used by Play Economy services.
 
 ## Create and publish Identity.Contracts package
 ```powershell
-$version="1.0.3"
+$version="1.0.4"
 $owner="RafaelJCamara"
 $gh_pat="[PERSONAL ACCESS TOKEN HERE]"
 
@@ -14,7 +14,7 @@ dotnet nuget push ..\packages\Play.Identity.Contracts.$version.nupkg --api-key $
 
 ## Build the docker image
 ```powershell
-$version="1.0.3"
+$version="1.0.4"
 $env:GH_OWNER="RafaelJCamara"
 $env:GH_PAT="[PERSONAL ACCESS TOKEN HERE]"
 
@@ -24,8 +24,9 @@ docker build --secret id=GH_OWNER --secret id=GH_PAT -t play.identity:$version .
 
 ## Run the docker image
 ```powershell
-$version="1.0.3"
+$version="1.0.4"
 $adminPass="[PASSWORD HERE]"
+$cosmosDbConnString="[CONN STRING HERE]"
 
-docker run -it --rm -p 5002:5002 --name identity -e MongoDbSettings__Host=mongo -e RabbitMQSettings__Host=rabbitmq -e IdentitySettings__AdminUserPassWord=$adminPass --network playinfra_default play.identity:$version
+docker run -it --rm -p 5002:5002 --name identity -e MongoDbSettings__ConnectionString=$cosmosDbConnString -e RabbitMQSettings__Host=rabbitmq -e IdentitySettings__AdminUserPassWord=$adminPass --network playinfra_default play.identity:$version
 ```

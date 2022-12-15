@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Vd/g9w7jA8KZ5Bj4p3VTX0auTCeDk7vl9SEizyZ7iHkmzoo7BfMylG+Ns7lef1OystfxSfIHpIyaEx+LkvrlHw==",
+  "dgSpecHash": "8Hqvwv5kTLPSjKeF4w7lzgbnssFgL3ebC0iUrcoX1pg/fQw77bCLM5JzX88Yhg7qhSXYkjwB73I2ukOAkUMM2g==",
   "success": true,
   "projectFilePath": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/Play.Identity.Service.csproj",
   "expectedPackageFiles": [
@@ -88,7 +88,7 @@
     "/Users/rafaelcamara/.nuget/packages/newid/3.0.3/newid.3.0.3.nupkg.sha512",
     "/Users/rafaelcamara/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
     "/Users/rafaelcamara/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
-    "/Users/rafaelcamara/.nuget/packages/play.common/1.0.6/play.common.1.0.6.nupkg.sha512",
+    "/Users/rafaelcamara/.nuget/packages/play.common/1.0.7/play.common.1.0.7.nupkg.sha512",
     "/Users/rafaelcamara/.nuget/packages/rabbitmq.client/6.2.2/rabbitmq.client.6.2.2.nupkg.sha512",
     "/Users/rafaelcamara/.nuget/packages/runtime.native.system/4.3.0/runtime.native.system.4.3.0.nupkg.sha512",
     "/Users/rafaelcamara/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",

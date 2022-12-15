@@ -1345,7 +1345,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "Play.Common/1.0.6": {
+      "Play.Common/1.0.7": {
         "type": "package",
         "dependencies": {
           "MassTransit.AspNetCore": "7.3.1",
@@ -2641,7 +2641,7 @@
           "lib/net5.0/ZstdSharp.dll": {}
         }
       },
-      "Play.Identity.Contracts/1.0.0": {
+      "Play.Identity.Contracts/1.0.3": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
@@ -4802,14 +4802,14 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "Play.Common/1.0.6": {
-      "sha512": "IownrDVZFR2DDdwZzm+LS5MbFSvCM664ik2cKCQ0mKwpNXFwpuNOQ6/xUuYN0I1FGQiSIqrV9vtIzNRph6/rHw==",
+    "Play.Common/1.0.7": {
+      "sha512": "Z9uSLANdrsclS8A+YgjQPiiazKevFqWt3b5UMG5qYFhyu23Wgsj6vQ0aSS0Mi9/ciz0qy/xZrOxoVy5Zh4EDig==",
       "type": "package",
-      "path": "play.common/1.0.6",
+      "path": "play.common/1.0.7",
       "files": [
         ".nupkg.metadata",
         "lib/net5.0/Play.Common.dll",
-        "play.common.1.0.6.nupkg.sha512",
+        "play.common.1.0.7.nupkg.sha512",
         "play.common.nuspec"
       ]
     },
@@ -8691,7 +8691,7 @@
         "zstdsharp.port.nuspec"
       ]
     },
-    "Play.Identity.Contracts/1.0.0": {
+    "Play.Identity.Contracts/1.0.3": {
       "type": "project",
       "path": "../Play.Identity.Contracts/Play.Identity.Contracts.csproj",
       "msbuildProject": "../Play.Identity.Contracts/Play.Identity.Contracts.csproj"
@@ -8706,8 +8706,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
-      "Play.Common >= 1.0.6",
-      "Play.Identity.Contracts >= 1.0.0",
+      "Play.Common >= 1.0.7",
+      "Play.Identity.Contracts >= 1.0.3",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -8715,7 +8715,7 @@
     "/Users/rafaelcamara/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.3",
     "restore": {
       "projectUniqueName": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/Play.Identity.Service.csproj",
       "projectName": "Play.Identity.Service",
@@ -8785,7 +8785,7 @@
           },
           "Play.Common": {
             "target": "Package",
-            "version": "[1.0.6, )"
+            "version": "[1.0.7, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

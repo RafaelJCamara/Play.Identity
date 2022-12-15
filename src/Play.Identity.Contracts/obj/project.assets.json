@@ -11,7 +11,7 @@
     "/Users/rafaelcamara/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.3",
     "restore": {
       "projectUniqueName": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj",
       "projectName": "Play.Identity.Contracts",
