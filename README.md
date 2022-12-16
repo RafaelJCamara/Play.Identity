@@ -1,7 +1,7 @@
 # Play.Identity
-Identity service used by Play Economy services.
+Identity microservice.
 
-## Create and publish Identity.Contracts package
+## Create and publish Identity.Contracts NuGet package
 ```powershell
 $version="1.0.4"
 $owner="RafaelJCamara"
