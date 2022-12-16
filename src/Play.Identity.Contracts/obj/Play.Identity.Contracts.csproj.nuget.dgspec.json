@@ -5,7 +5,7 @@
   },
   "projects": {
     "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj": {
-      "version": "1.0.3",
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/Play.Identity.Contracts.csproj",
         "projectName": "Play.Identity.Contracts",

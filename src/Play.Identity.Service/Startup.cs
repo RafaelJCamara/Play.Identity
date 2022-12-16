@@ -53,7 +53,7 @@ namespace Play.Identity.Service
                     serviceSettings.ServiceName
                 );
 
-            services.AddMassTransitWithRabbitMq(retryConfigurator =>
+            services.AddMassTransitWithessageBroker(Configuration, retryConfigurator =>
             {
                 retryConfigurator.Interval(3, TimeSpan.FromSeconds(5));
                 retryConfigurator.Ignore(typeof(UnknownUserException));
