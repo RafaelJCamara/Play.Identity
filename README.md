@@ -22,7 +22,7 @@ $appname="playeconomy"
 docker build --secret id=GH_OWNER --secret id=GH_PAT -t "$appname.azurecr.io/play.identity:$version" .
 ```
 
-
+;
 ## Run the docker image
 ```powershell
 $version="1.0.5"
