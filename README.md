@@ -42,7 +42,16 @@ docker push "$appname.azurecr.io/play.identity:$version"
 
 ## Create the Kubernetes namespace
 # Creates namespace for resources tht would be used in the identity pod 
+# Each microservice should have its own namespace (set of resources for the microservice)
 ```powershell
 $namespace="identity"
 kubectl create namespace $namespace
+```
+
+## Create the Kubernetes namespace
+```powershell
+kubectl create secret generic identity-secrets 
+--from-literal=cosmosdb-connectionstring=$cosmosDbConnString
+--from-literal=servicebus-connectionstring=$serviceBusConnString
+--from-literal=admin-password=$adminPass -n $namespace
 ```
