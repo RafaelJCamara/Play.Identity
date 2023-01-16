@@ -39,3 +39,10 @@ docker run -it --rm -p 5002:5002 --name identity -e MongoDbSettings__ConnectionS
 az acr login --name $appname
 docker push "$appname.azurecr.io/play.identity:$version"
 ```
+
+## Create the Kubernetes namespace
+# Creates namespace for resources tht would be used in the identity pod 
+```powershell
+$namespace="identity"
+kubectl create namespace $namespace
+```
