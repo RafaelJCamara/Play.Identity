@@ -4,22 +4,26 @@ using System.Linq;
 using System.Threading.Tasks;
 using GreenPipes;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
+using MongoDB.Driver;
 using Play.Common.MassTransit;
 using Play.Common.Settings;
 using Play.Identity.Service.Entities;
 using Play.Identity.Service.Exceptions;
+using Play.Identity.Service.HealthChecks;
 using Play.Identity.Service.HostedServices;
 using Play.Identity.Service.Settings;
 
@@ -82,7 +86,20 @@ namespace Play.Identity.Service
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Play.Identity.Service", Version = "v1" });
             });
 
-            services.AddHealthChecks();
+            services
+                .AddHealthChecks()
+                .Add(new HealthCheckRegistration(
+                    "MongoDb Health Check",
+                    serviceProvider =>
+                    {
+                        var mongoClient = new MongoClient(mongoDbSettings.ConnectionString);
+                        return new MongoDbHealthChecks(mongoClient);
+                    },
+                    HealthStatus.Unhealthy,
+                    //tags to group health checks
+                    new[] { "ready" },
+                    TimeSpan.FromSeconds(5)
+                ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -120,7 +137,15 @@ namespace Play.Identity.Service
             {
                 endpoints.MapControllers();
                 endpoints.MapRazorPages();
-                endpoints.MapHealthChecks("/health");
+                endpoints.MapHealthChecks("/health/ready", new HealthCheckOptions()
+                {
+                    Predicate = (check) => check.Tags.Contains("ready")
+                });
+                endpoints.MapHealthChecks("/health/live", new HealthCheckOptions()
+                {
+                    //we are returning false because we are not interested on the health status, but are only interested in receiving a response from the service
+                    Predicate = (check) => false
+                });
             });
         }
     }
