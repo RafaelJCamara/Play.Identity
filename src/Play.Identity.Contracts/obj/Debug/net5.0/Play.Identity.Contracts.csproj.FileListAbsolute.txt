@@ -12,7 +12,6 @@ c:/Users/Rafael/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Id
 c:/Users/Rafael/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/obj/Debug/net5.0/ref/Play.Identity.Contracts.dll
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/bin/Debug/net5.0/Play.Identity.Contracts.deps.json
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/bin/Debug/net5.0/Play.Identity.Contracts.dll
-/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/bin/Debug/net5.0/ref/Play.Identity.Contracts.dll
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/bin/Debug/net5.0/Play.Identity.Contracts.pdb
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/obj/Debug/net5.0/Play.Identity.Contracts.csproj.AssemblyReference.cache
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/obj/Debug/net5.0/Play.Identity.Contracts.GeneratedMSBuildEditorConfig.editorconfig
@@ -22,3 +21,4 @@ c:/Users/Rafael/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Id
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/obj/Debug/net5.0/Play.Identity.Contracts.dll
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/obj/Debug/net5.0/ref/Play.Identity.Contracts.dll
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/obj/Debug/net5.0/Play.Identity.Contracts.pdb
+/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Contracts/obj/Debug/net5.0/refint/Play.Identity.Contracts.dll

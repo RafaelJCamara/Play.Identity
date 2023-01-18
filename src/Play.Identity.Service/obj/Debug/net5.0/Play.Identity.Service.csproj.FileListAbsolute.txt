@@ -413,7 +413,6 @@ c:/Users/Rafael/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Id
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Play.Identity.Service.runtimeconfig.json
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Play.Identity.Service.runtimeconfig.dev.json
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Play.Identity.Service.dll
-/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/ref/Play.Identity.Service.dll
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Play.Identity.Service.pdb
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Play.Identity.Service.Views.dll
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Play.Identity.Service.Views.pdb
@@ -610,3 +609,5 @@ c:/Users/Rafael/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Id
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/obj/Debug/net5.0/ref/Play.Identity.Service.dll
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/obj/Debug/net5.0/Play.Identity.Service.pdb
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/obj/Debug/net5.0/Play.Identity.Service.genruntimeconfig.cache
+/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Play.Identity.Service
+/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/obj/Debug/net5.0/refint/Play.Identity.Service.dll

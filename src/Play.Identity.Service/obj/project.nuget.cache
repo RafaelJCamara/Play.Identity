@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P2YfslKbfNCHKaUq4IW9yf1zeei5do+To4UB03jwZ41VPFGuJHwFYkbRb9S1XhkFkYSTMbodrLbaHqPdHQMc8g==",
+  "dgSpecHash": "64oDJzJUfhCDTEBDHRpuXc0KZNZ0fNDo3c01zF6jAhLrSokHkYNtfhnM+A+4dLw+9U+tIBWVxyjY0LCdCb6r9g==",
   "success": true,
   "projectFilePath": "/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/Play.Identity.Service.csproj",
   "expectedPackageFiles": [
