@@ -14,7 +14,7 @@ dotnet nuget push ..\packages\Play.Identity.Contracts.$version.nupkg --api-key $
 
 ## Build the docker image
 ```powershell
-$version="1.0.5"
+$version="1.0.6"
 $env:GH_OWNER="RafaelJCamara"
 $env:GH_PAT="[PERSONAL ACCESS TOKEN HERE]"
 $appname="playeconomy"
