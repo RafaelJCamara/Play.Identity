@@ -48,7 +48,7 @@ $namespace="identity"
 kubectl create namespace $namespace
 ```
 
-## Create the Kubernetes namespace
+## Create the Kubernetes secrets
 ```powershell
 kubectl create secret generic identity-secrets 
 --from-literal=cosmosdb-connectionstring=$cosmosDbConnString
