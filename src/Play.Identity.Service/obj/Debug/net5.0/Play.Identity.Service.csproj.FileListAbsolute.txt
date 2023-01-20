@@ -611,3 +611,5 @@ c:/Users/Rafael/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Id
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/obj/Debug/net5.0/Play.Identity.Service.genruntimeconfig.cache
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Play.Identity.Service
 /Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/obj/Debug/net5.0/refint/Play.Identity.Service.dll
+/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+/Users/rafaelcamara/Documents/Projects/DotnetMicroservices/Play.Identity/src/Play.Identity.Service/bin/Debug/net5.0/Azure.Security.KeyVault.Secrets.dll
