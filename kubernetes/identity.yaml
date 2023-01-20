@@ -54,6 +54,6 @@ kind: ServiceAccount
 metadata:
   name: identity-serviceaccount
   annotations:
-    azure.workload.identity/client-id: 82cd6e65-2730-463a-835f-4c78a2075607
+    azure.workload.identity/client-id: <your_client_id>
   labels:
     azure.workload.identity/use: "true"
