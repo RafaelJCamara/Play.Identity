@@ -22,7 +22,6 @@ $appname="playeconomy"
 docker build --secret id=GH_OWNER --secret id=GH_PAT -t "$appname.azurecr.io/play.identity:$version" .
 ```
 
-;
 ## Run the docker image
 ```powershell
 $version="1.0.5"
@@ -60,4 +59,19 @@ kubectl create secret generic identity-secrets
 
 ```powershell
 kubectl apply -f .\kubernetes\identity.yaml -n $namespace
+```
+
+## Creating the Azure Managed Identity and granting it access to Key Vault secrets
+```powershell
+az identity create --resource-group $appname --name $namespace
+$IDENTITY_CLIENT_ID=az identity show -g $appname -n $namespace --query clientId -otsv
+# creates in key vault this policy with the name identity (or whatever is on the appname) and everyone this a part of this only has the permissions of "get" and "set"
+az keyvault set-policy -n $appname --secret-permissions get list --spn $IDENTITY_CLIENT_ID
+```
+
+## Establish the federated identity credential
+```powershell
+$AKS_OIDC_ISSUER=az aks show -n $appname -g $appname --query "oidcIssuerProfile.issuerUrl" -otsv
+
+az identity federated-credential create --name $namespace --identity-name $namespace --resource-group $appname --issuer $AKS_OIDC_ISSUER --subject "system:serviceaccount:${namespace}:${namespace}-serviceaccount"
 ```

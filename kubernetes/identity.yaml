@@ -9,13 +9,12 @@ spec:
   template:
     metadata:
       labels:
-        # must match app from matchLabels above
         app: identity
     spec:
+      serviceAccountName: identity-serviceaccount
       containers:
-      # this name here has nothing to do with the container
       - name: identity
-        image: playeconomycontainerregistry.azurecr.io/play.identity:1.0.5
+        image: playeconomy.azurecr.io/play.identity:1.0.5
         env:
           - name: ServiceSettings__MessageBroker
             value: SERVICEBUS
@@ -29,7 +28,7 @@ spec:
               secretKeyRef:
                 name: identity-secrets
                 key: servicebus-connectionstring
-          - name: IdentitySettings__AdminUserPassWord
+          - name: IdentitySettings__AdminUserPassword
             valueFrom:
               secretKeyRef:
                 name: identity-secrets
@@ -49,10 +48,9 @@ spec:
           httpGet:
             path: /health/ready
             port: 5002
-          initialDelaySeconds: 10
+          initialDelaySeconds: 10          
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -65,3 +63,12 @@ spec:
   - port: 80
     targetPort: 5002
 
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: identity-serviceaccount
+  annotations:
+    azure.workload.identity/client-id: 82cd6e65-2730-463a-835f-4c78a2075607
+  labels:
+    azure.workload.identity/use: "true"
