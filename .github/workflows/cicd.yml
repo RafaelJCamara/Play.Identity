@@ -36,7 +36,7 @@ jobs:
         dotnet-version: 5.0.x
         source-url: https://nuget.pkg.github.com/RafaelJCamara/index.json
       env:
-        NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        NUGET_AUTH_TOKEN: ${{ secrets.PUSH_NUGET }} 
         
     - name: Pack
       run: | 
@@ -47,4 +47,4 @@ jobs:
         -o packages
 
     - name: Publish
-      run: dotnet nuget push packages/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/RafaelJCamara/index.json
+      run: dotnet nuget push packages/*.nupkg --api-key ${{ secrets.PUSH_NUGET }} --source https://nuget.pkg.github.com/RafaelJCamara/index.json
